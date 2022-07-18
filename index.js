@@ -77,8 +77,8 @@ searchUser.addEventListener("keyup", (e) => {
     Array.from(rows).forEach((row) => {
       // Check if ID or Name is matched
       if (
-        row.cells[0].innerHTML.includes(searchText) ||
-        row.cells[1].innerHTML.includes(searchText)
+        row.cells[0].innerHTML.toLowerCase().includes(searchText.toLowerCase()) ||
+        row.cells[1].innerHTML.toLowerCase().includes(searchText.toLowerCase())
       ) {
         // Increment Count and display row
         count += 1;
